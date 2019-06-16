@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.jm.checkjum.Main">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mbtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/checkjum"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/library" />
+
+        <TextView
+            android:id="@+id/textCheckjum"
+            android:text="추천도서"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/textLibrary"
+            app:layout_constraintTop_toBottomOf="@+id/checkjum"
+            android:layout_marginLeft="7dp"
+            />
+
+        <ImageView
+            android:id="@+id/library"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_location_on_black_24dp"
+            app:layout_constraintLeft_toRightOf="@+id/checkjum"
+            app:layout_constraintRight_toRightOf="@+id/personal" />
+
+        <TextView
+            android:id="@+id/textLibrary"
+            android:text="도서관검색"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/textCheckjum"
+            app:layout_constraintRight_toLeftOf="@+id/textPersonal"
+            app:layout_constraintTop_toBottomOf="@+id/checkjum"
+            android:layout_marginLeft="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/personal"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_person_black_24dp"
+            app:layout_constraintLeft_toRightOf="@+id/library"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textPersonal"
+            android:text="마이페이지"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/textLibrary"
+            app:layout_constraintTop_toBottomOf="@+id/checkjum"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/mbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

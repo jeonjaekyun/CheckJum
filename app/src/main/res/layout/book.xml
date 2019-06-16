@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bebebe">
+
+    <LinearLayout
+        android:id="@+id/bookinfo_area"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#ffffff"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/coverframe"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/b_cover"
+                android:layout_width="124dp"
+                android:layout_height="173dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/book10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="제목"
+                android:id="@+id/b_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/b_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저자"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/b_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출판사"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/b_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="평점"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bookintro"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/bookinfo_area">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="책소개"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/b_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ebtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/bookintro">
+
+        <ImageView
+            android:id="@+id/interest"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/interest"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/comment" />
+
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/comment"
+            app:layout_constraintLeft_toRightOf="@+id/interest"
+            app:layout_constraintRight_toRightOf="@+id/check" />
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/check"
+            app:layout_constraintLeft_toRightOf="@+id/comment"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/toLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:gravity="center|left"
+        app:layout_constraintTop_toBottomOf="@id/ebtn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="도서관검색"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
